@@ -1,0 +1,6 @@
+Name = "GMath"
+Language = "C++"
+Version = "1.0.0"
+Source = [
+    "Source/Point2F.cpp",
+]
