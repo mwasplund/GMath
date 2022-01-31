@@ -2,149 +2,184 @@
 //     Copyright (c) MWASPLUND. All rights reserved.
 // </copyright>
 
+module;
 #include <iostream>
-#include "Point2F.h"
+export module GMath:Point2F;
 
-using namespace GMath;
-
-std::wostream& GMath::operator<<(std::wostream& stream, const Point2F& value)
+export namespace GMath
 {
-	stream << L"Point2F["
-		<< value.GetX() << L","
-		<< value.GetY() << L"]";
+	/// <summary>
+	/// The floating point 2D
+	/// </summary>
+	class Point2F
+	{
+	private:
+		/// <summary>
+		/// The values
+		/// </summary>
+		float m_x;
+		float m_y;
 
-	return stream;
-}
+	public:
+		/// <summary>
+		/// Defaults
+		/// </summary>
+		static const Point2F& Zero()
+		{
+			static auto value = Point2F(0, 0);
+			return value;
+		}
 
-/*static*/ const Point2F& Point2F::Zero()
-{
-	static Point2F value = Point2F(0, 0);
-	return value;
-}
+		static Point2F& One()
+		{
+			static auto value = Point2F(1, 1);
+			return value;
+		}
 
-/*static*/ const Point2F& Point2F::One()
-{
-	static Point2F value = Point2F(1, 1);
-	return value;
-}
+		static const Point2F& UnitX()
+		{
+			static auto value = Point2F(1, 0);
+			return value;
+		}
 
-/*static*/ const Point2F& Point2F::UnitX()
-{
-	static Point2F value = Point2F(1, 0);
-	return value;
-}
+		static const Point2F& UnitY()
+		{
+			static auto value = Point2F(0, 1);
+			return value;
+		}
 
-/*static*/ const Point2F& Point2F::UnitY()
-{
-	static Point2F value = Point2F(0, 1);
-	return value;
-}
+	public:
+		/// <summary>
+		/// Initialize a new instance of the Point2F class
+		/// </summary>
+		Point2F() :
+			m_x(0),
+			m_y(0)
+		{
+		}
 
-Point2F::Point2F() :
-	m_x(0),
-	m_y(0)
-{
-}
+		Point2F(float x, float y) :
+			m_x(x),
+			m_y(y)
+		{
+		}
 
-Point2F::Point2F(float x, float y) :
-	m_x(x),
-	m_y(y)
-{
-}
+		/// <summary>
+		/// Named Access
+		/// </summary>
+		float GetX() const
+		{
+			return m_x;
+		}
 
-float Point2F::GetX() const
-{
-	return m_x;
-}
+		float GetY() const
+		{
+			return m_y;
+		}
 
-float Point2F::GetY() const
-{
-	return m_y;
-}
+		void SetX(float value)
+		{
+			m_x = value;
+		}
 
-void Point2F::SetX(float value)
-{
-	m_x = value;
-}
+		void SetY(float value)
+		{
+			m_y = value;
+		}
 
-void Point2F::SetY(float value)
-{
-	m_y = value;
-}
+		/// <summary>
+		/// Assignment Operators
+		/// </summary>
+		Point2F& operator=(const Point2F& rhs)
+		{
+			m_x = rhs.m_x;
+			m_y = rhs.m_y;
+			return *this;
+		}
 
-Point2F& Point2F::operator=(const Point2F& rhs)
-{
-	m_x = rhs.m_x;
-	m_y = rhs.m_y;
-	return *this;
-}
+		Point2F& operator+=(const Point2F& rhs)
+		{
+			m_x += rhs.m_x;
+			m_y += rhs.m_y;
+			return *this;
+		}
 
-Point2F& Point2F::operator+=(const Point2F& rhs)
-{
-	m_x += rhs.m_x;
-	m_y += rhs.m_y;
-	return *this;
-}
+		Point2F& operator-=(const Point2F& rhs)
+		{
+			m_x -= rhs.m_x;
+			m_y -= rhs.m_y;
+			return *this;
+		}
 
-Point2F& Point2F::operator-=(const Point2F& rhs)
-{
-	m_x -= rhs.m_x;
-	m_y -= rhs.m_y;
-	return *this;
-}
+		Point2F& operator*=(const Point2F& rhs)
+		{
+			m_x *= rhs.m_x;
+			m_y *= rhs.m_y;
+			return *this;
+		}
 
-Point2F& Point2F::operator*=(const Point2F& rhs)
-{
-	m_x *= rhs.m_x;
-	m_y *= rhs.m_y;
-	return *this;
-}
+		Point2F& operator/=(const Point2F& rhs)
+		{
+			m_x /= rhs.m_x;
+			m_y /= rhs.m_y;
+			return *this;
+		}
 
-Point2F& Point2F::operator/=(const Point2F& rhs)
-{
-	m_x /= rhs.m_x;
-	m_y /= rhs.m_y;
-	return *this;
-}
+		/// <summary>
+		/// Arithmetic Operators
+		/// </summary>
+		Point2F operator+(const Point2F& rhs) const
+		{
+			return Point2F(
+				m_x + rhs.m_x,
+				m_y + rhs.m_y);
+		}
 
-Point2F Point2F::operator+(const Point2F& rhs) const
-{
-	return Point2F(
-		m_x + rhs.m_x,
-		m_y + rhs.m_y);
-}
+		Point2F operator-(const Point2F& rhs) const
+		{
+			return Point2F(
+				m_x - rhs.m_x,
+				m_y - rhs.m_y);
+		}
 
-Point2F Point2F::operator-(const Point2F& rhs) const
-{
-	return Point2F(
-		m_x - rhs.m_x,
-		m_y - rhs.m_y);
-}
+		Point2F operator*(const Point2F& rhs) const
+		{
+			return Point2F(
+				m_x * rhs.m_x,
+				m_y * rhs.m_y);
+		}
 
-Point2F Point2F::operator*(const Point2F& rhs) const
-{
-	return Point2F(
-		m_x * rhs.m_x,
-		m_y * rhs.m_y);
-}
+		Point2F operator/(const Point2F& rhs) const
+		{
+			return Point2F(
+				m_x / rhs.m_x,
+				m_y / rhs.m_y);
+		}
 
-Point2F Point2F::operator/(const Point2F& rhs) const
-{
-	return Point2F(
-		m_x / rhs.m_x,
-		m_y / rhs.m_y);
-}
+		/// <summary>
+		/// Comparison Operators
+		/// </summary>
+		bool operator==(const Point2F& rhs) const
+		{
+			return
+				m_x == rhs.m_x &&
+				m_y == rhs.m_y;
+		}
 
-bool Point2F::operator==(const Point2F& rhs) const
-{
-	return
-		m_x == rhs.m_x &&
-		m_y == rhs.m_y;
-}
+		bool operator!=(const Point2F& rhs) const
+		{
+			return
+				m_x != rhs.m_x ||
+				m_y != rhs.m_y;
+		}
+	};
 
-bool Point2F::operator!=(const Point2F& rhs) const
-{
-	return
-		m_x != rhs.m_x ||
-		m_y != rhs.m_y;
+	std::wostream& operator<<(std::wostream& stream, const Point2F& value)
+	{
+		stream << L"["
+			<< value.GetX() << L", "
+			<< value.GetY() << L"]";
+
+		return stream;
+	}
 }

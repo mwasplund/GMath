@@ -1,6 +1,10 @@
 Name = "GMath"
 Language = "C++"
 Version = "1.0.0"
-Source = [
+Partitions = [
     "Source/Point2F.cpp",
+    "Source/Point2U.cpp",
+    "Source/Point3F.cpp",
+    "Source/Point4F.cpp",
 ]
+Interface = "Source/Interface.cpp"
