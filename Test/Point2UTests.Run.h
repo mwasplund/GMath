@@ -15,7 +15,7 @@ TestState RunPoint2UTests()
 	state += Soup::Test::RunTest(className, "SetX_SetsValue", [&testClass]() { testClass->SetX_SetsValue(); });
 	state += Soup::Test::RunTest(className, "SetY_SetsValue", [&testClass]() { testClass->SetY_SetsValue(); });
 	state += Soup::Test::RunTest(className, "Operator_AddEqual_AddsValue", [&testClass]() { testClass->Operator_AddEqual_AddsValue(); });
-	state += Soup::Test::RunTest(className, "Operator_MinusEqual_SubtractsValue", [&testClass]() { testClass->Initialize_UnitY(); });
+	state += Soup::Test::RunTest(className, "Operator_MinusEqual_SubtractsValue", [&testClass]() { testClass->Operator_MinusEqual_SubtractsValue(); });
 	state += Soup::Test::RunTest(className, "Operator_MultiplyEqual_MulipliesValue", [&testClass]() { testClass->Operator_MultiplyEqual_MulipliesValue(); });
 	state += Soup::Test::RunTest(className, "Operator_DivideEqual_DividesValue", [&testClass]() { testClass->Operator_DivideEqual_DividesValue(); });
 	state += Soup::Test::RunTest(className, "Operator_Add_AddsValue", [&testClass]() { testClass->Operator_Add_AddsValue(); });
