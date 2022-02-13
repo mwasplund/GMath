@@ -6,7 +6,7 @@ module;
 #include <iostream>
 export module GMath:SizeF;
 
-namespace GMath
+export namespace GMath
 {
 	/// <summary>
 	/// The floating point size 2D
@@ -87,11 +87,11 @@ namespace GMath
 		}
 	};
 	
-	std::wostream& operator<<(std::wostream& stream, const SizeF& value)
+	std::ostream& operator<<(std::ostream& stream, const SizeF& value)
 	{
-		stream << L"["
-			<< value.GetWidth() << L", "
-			<< value.GetHeight() << L"]";
+		stream << "["
+			<< value.GetWidth() << ", "
+			<< value.GetHeight() << "]";
 
 		return stream;
 	}
