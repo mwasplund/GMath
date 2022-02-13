@@ -87,11 +87,11 @@ export namespace GMath
 		}
 	};
 
-	std::wostream& operator<<(std::wostream& stream, const RangeU& value)
+	std::ostream& operator<<(std::ostream& stream, const RangeU& value)
 	{
-		stream << L"["
-			<< value.GetMin() << L", "
-			<< value.GetMax() << L"]";
+		stream << "["
+			<< value.GetMin() << ", "
+			<< value.GetMax() << "]";
 
 		return stream;
 	}

@@ -19,6 +19,8 @@ using namespace Soup::Test;
 #include "Point2UTests.Run.h"
 #include "Point3FTests.Run.h"
 #include "Point4FTests.Run.h"
+#include "RangeFTests.Run.h"
+#include "RangeUTests.Run.h"
 #include "SizeFTests.Run.h"
 #include "SizeUTests.Run.h"
 
@@ -32,6 +34,8 @@ int main()
 	state += RunPoint2UTests();
 	state += RunPoint3FTests();
 	state += RunPoint4FTests();
+	state += RunRangeFTests();
+	state += RunRangeUTests();
 	state += RunSizeFTests();
 	state += RunSizeUTests();
 
