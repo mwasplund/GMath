@@ -87,11 +87,11 @@ export namespace GMath
 		}
 	};
 
-	std::wostream& operator<<(std::wostream& stream, const SizeU& value)
+	std::ostream& operator<<(std::ostream& stream, const SizeU& value)
 	{
-		stream << L"["
-			<< value.GetWidth() << L", "
-			<< value.GetHeight() << L"]";
+		stream << "["
+			<< value.GetWidth() << ", "
+			<< value.GetHeight() << "]";
 
 		return stream;
 	}

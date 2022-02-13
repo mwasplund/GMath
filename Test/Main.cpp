@@ -20,6 +20,7 @@ using namespace Soup::Test;
 #include "Point3FTests.Run.h"
 #include "Point4FTests.Run.h"
 #include "SizeFTests.Run.h"
+#include "SizeUTests.Run.h"
 
 int main()
 {
@@ -32,6 +33,7 @@ int main()
 	state += RunPoint3FTests();
 	state += RunPoint4FTests();
 	state += RunSizeFTests();
+	state += RunSizeUTests();
 
 	std::cout << state.PassCount << " PASSED." << std::endl;
 	std::cout << state.FailCount << " FAILED." << std::endl;

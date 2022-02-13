@@ -9,3 +9,4 @@ export import :Point2U;
 export import :Point3F;
 export import :Point4F;
 export import :SizeF;
+export import :SizeU;
