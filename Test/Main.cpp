@@ -21,6 +21,8 @@ using namespace Soup::Test;
 #include "Point4FTests.Run.h"
 #include "RangeFTests.Run.h"
 #include "RangeUTests.Run.h"
+#include "RectangleFTests.Run.h"
+#include "RectangleUTests.Run.h"
 #include "SizeFTests.Run.h"
 #include "SizeUTests.Run.h"
 
@@ -36,6 +38,8 @@ int main()
 	state += RunPoint4FTests();
 	state += RunRangeFTests();
 	state += RunRangeUTests();
+	state += RunRectangleFTests();
+	state += RunRectangleUTests();
 	state += RunSizeFTests();
 	state += RunSizeUTests();
 

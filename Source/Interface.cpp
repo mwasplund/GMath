@@ -10,5 +10,7 @@ export import :Point3F;
 export import :Point4F;
 export import :RangeF;
 export import :RangeU;
+export import :RectangleF;
+export import :RectangleU;
 export import :SizeF;
 export import :SizeU;
