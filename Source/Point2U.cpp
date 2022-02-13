@@ -174,11 +174,11 @@ export namespace GMath
 		}
 	};
 	
-	std::wostream& operator<<(std::wostream& stream, const Point2U& value)
+	std::ostream& operator<<(std::ostream& stream, const Point2U& value)
 	{
-		stream << L"["
-			<< value.GetX() << L", "
-			<< value.GetY() << L"]";
+		stream << "["
+			<< value.GetX() << ", "
+			<< value.GetY() << "]";
 
 		return stream;
 	}
