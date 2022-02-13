@@ -16,6 +16,7 @@ import Soup.Test.Assert;
 using namespace Soup::Test;
 
 #include "Point2FTests.Run.h"
+#include "Point3FTests.Run.h"
 
 int main()
 {
@@ -24,6 +25,7 @@ int main()
 	TestState state = { 0, 0 };
 
 	state += RunPoint2FTests();
+	state += RunPoint3FTests();
 
 	std::cout << state.PassCount << " PASSED." << std::endl;
 	std::cout << state.FailCount << " FAILED." << std::endl;

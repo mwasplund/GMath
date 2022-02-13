@@ -2,21 +2,21 @@ Name = "GMath"
 Language = "C++"
 Version = "1.0.0"
 Partitions = [
-    # { Source = "Source/BoundingBoxF.cpp" },
-    # { Source = "Source/PlaneF.cpp" },
-    { Source = "Source/Point2F.cpp" },
-    { Source = "Source/Point2U.cpp" },
-    { Source = "Source/Point3F.cpp" },
-    { Source = "Source/Point4F.cpp" },
-    { Source = "Source/RangeF.cpp" },
-    { Source = "Source/RangeU.cpp" },
-    { Source = "Source/RectangleF.cpp", Imports = [ "Source/Point2F.cpp", "Source/SizeF.cpp" ] },
-    { Source = "Source/RectangleU.cpp", Imports = [ "Source/Point2U.cpp", "Source/SizeU.cpp" ] },
-    { Source = "Source/SizeF.cpp" },
-    { Source = "Source/SizeU.cpp" },
-    #{ Source = "Source/Vector2F.cpp" },
-    #{ Source = "Source/Vector3F.cpp" },
-    #{ Source = "Source/Vector4F.cpp" },
+	# { Source = "Source/BoundingBoxF.cpp" },
+	# { Source = "Source/PlaneF.cpp" },
+	{ Source = "Source/Point2F.cpp" },
+	{ Source = "Source/Point2U.cpp" },
+	{ Source = "Source/Point3F.cpp" },
+	{ Source = "Source/Point4F.cpp" },
+	{ Source = "Source/RangeF.cpp" },
+	{ Source = "Source/RangeU.cpp" },
+	{ Source = "Source/RectangleF.cpp", Imports = [ "Source/Point2F.cpp", "Source/SizeF.cpp" ] },
+	{ Source = "Source/RectangleU.cpp", Imports = [ "Source/Point2U.cpp", "Source/SizeU.cpp" ] },
+	{ Source = "Source/SizeF.cpp" },
+	{ Source = "Source/SizeU.cpp" },
+	#{ Source = "Source/Vector2F.cpp" },
+	#{ Source = "Source/Vector3F.cpp" },
+	#{ Source = "Source/Vector4F.cpp" },
 ]
 Interface = "Source/Interface.cpp"
 

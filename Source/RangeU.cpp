@@ -6,7 +6,7 @@ module;
 #include <iostream>
 export module GMath:RangeU;
 
-namespace GMath
+export namespace GMath
 {
 	/// <summary>
 	/// The unsigned int range

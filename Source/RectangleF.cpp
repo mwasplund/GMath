@@ -100,11 +100,11 @@ export namespace GMath
 		}
 	};
 	
-	std::wostream& operator<<(std::wostream& stream, const RectangleF& value)
+	std::ostream& operator<<(std::ostream& stream, const RectangleF& value)
 	{
-		stream << L"["
-			<< value.GetTopLeft() << L", "
-			<< value.GetBottomRight() << L"]";
+		stream << "["
+			<< value.GetTopLeft() << ", "
+			<< value.GetBottomRight() << "]";
 
 		return stream;
 	}
